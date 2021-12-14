@@ -1,0 +1,60 @@
+
+  $base-color: #333333;
+  $digit-font-size:64px;
+  $panel-padding:32px;
+  $border-radius:2px;
+  $panel-margin:8px;
+  $reset-font-size:8px;
+  $reset-padding: 4px 8px;
+.app-component{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $base-color;
+  height: 100%;
+  width: 100%;
+  .flex-row{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .digit-panel-group{
+      display: flex;
+      .digit-panel{
+        user-select: none;
+        font-size: $digit-font-size;
+        padding: $panel-padding;
+        margin: $panel-margin;
+        border: 1px solid $base-color;
+        border-radius: $border-radius;
+      }
+    }
+
+    .count-button{
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .reset-button{
+      position: absolute;
+      bottom: 0;
+      transform: translateY(100%);
+      cursor: pointer;
+      user-select: none;
+
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      font-size: $reset-font-size;
+      padding: $reset-padding;
+      border: 1px solid $base-color;
+      border-radius: $border-radius;
+      z-index: 1;
+    }
+  }
+}
